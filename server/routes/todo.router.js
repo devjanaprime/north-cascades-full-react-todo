@@ -28,7 +28,29 @@ router.post( '/', ( req, res )=>{
 })
 
 // PUT
+router.put( '/', ( req, res )=>{
+    console.log( '/api/todo PUT:', req.body, req.query );
+    const queryString =` UPDATE "todos" SET completed=NOW() WHERE id=$1;`;
+    const values = [ req.query.id ]; 
+    pool.query( queryString, values ).then( ( results )=>{
+        res.sendStatus( 200 );
+    }).catch( (err)=>{
+        console.log( err );
+        res.sendStatus( 400 );
+    })
+})
 
 // DELETE
+router.delete( '/', ( req, res )=>{
+    console.log( '/api/todo DELETE:', req.body, req.query );
+    const queryString =` DELETE FROM "todos" WHERE id=$1;`;
+    const values = [ req.query.id ];
+    pool.query( queryString, values ).then( ( results )=>{
+        res.sendStatus( 200 );
+    }).catch( ( err )=>{
+        console.log( err );
+        res.sendStatus( 400 );
+    })
+})
 
 module.exports = router;

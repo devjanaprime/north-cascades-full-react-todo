@@ -1,13 +1,13 @@
 import {useState} from 'react';
 
-function _tempalte () {
+function _template () {
   
   return (
     <div>
-      <h1>_tempalte</h1>
+      <h1>_template</h1>
     </div>
   );
 
 }
 
-export default _tempalte
+export default _template
