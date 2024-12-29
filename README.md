@@ -1,5 +1,11 @@
 # North Cascades Full React Todo
 
+Videos: 
+
+- Pt1: https://vimeo.com/1042661993?ts=0&share=copy
+- Pt2: https://vimeo.com/1042686489?share=copy
+- Pt3: https://vimeo.com/1042706329?ts=0&share=copy
+
 Full featured Full stack React Todo list with zustand store & priority levels. 
 
 Solid base to take further with the following options:
