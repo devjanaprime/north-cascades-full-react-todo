@@ -10,20 +10,10 @@ import axios from 'axios';
 function App () {
   
   useEffect( ()=>{
-    fetchTodos();
+    getTodos();
   }, [])
 
-  function fetchTodos(){
-    axios.get( '/api/todo' ).then( function( response ){
-      setTodos( response.data );
-    }).catch( function( err ){
-      console.log( err );
-      alert( 'error getting todos from server' );
-    })
-  }
-
-  const todos = useStore( ( state )=> state.todos );
-  const setTodos = useStore( ( state )=> state.setTodos );
+  const getTodos = useStore( ( state )=> state.getTodos );
 
   return (
     <div>

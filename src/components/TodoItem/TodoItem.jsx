@@ -1,12 +1,16 @@
 import {useState} from 'react';
 import axios from 'axios'
+import useStore from '../Store/store';
 
 function TodoItem ( todo ) {
   
+  const getTodos = useStore( ( state )=> state.getTodos );
+
   function completeMe(){
     console.log( 'you complete me:', todo.todo.id );
     axios.put( `/api/todo?id=${todo.todo.id}`).then( function( response ){
       console.log( 'back from PUT:', response.data );
+      getTodos();
     }).catch( function( err ){
       console.log( err );
       alert( 'error updating todo' );
@@ -17,6 +21,7 @@ function TodoItem ( todo ) {
     console.log( 'you deleteMe:', todo.todo.id );
     axios.delete( `/api/todo?id=${todo.todo.id}`).then( function( response ){
       console.log( 'back from PUT:', response.data );
+      getTodos();
     }).catch( function( err ){
       console.log( err );
       alert( 'error updating todo' );

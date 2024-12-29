@@ -1,12 +1,16 @@
 import {useState} from 'react';
 import axios from 'axios';
+import useStore from '../Store/store';
 
 function CreateNew () {
   const [ newTodo, setNewTodo ] = useState( { name:'', priority: 0 } );
+  const getTodos = useStore( ( state )=> state.getTodos );
+
   function createNewTodo(){
     console.log( 'in createNewTodo' );
     axios.post( '/api/todo', newTodo ).then( function( response ){
       console.log( response.data );
+      getTodos();
     }).catch( function( err ){
       console.log( err );
       alert( 'error creating new todo' );
