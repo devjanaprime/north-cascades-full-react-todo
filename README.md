@@ -8,6 +8,11 @@ Videos:
 
 Full featured Full stack React Todo list with zustand store & priority levels. 
 
+My original plan for reference:
+
+![plan image](todoPlan.png)
+
+
 Solid base to take further with the following options:
 
 - Order display results by completed date
