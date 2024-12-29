@@ -1,9 +1,12 @@
-# Project Name
+# North Cascades Full React Todo
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Full featured Full stack React Todo list with zustand store & priority levels. 
 
-## Description
+Solid base to take further with the following options:
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+- Order display results by completed date
+- Filter display results to only show incomplete
+- Filter display results to only show complete
+- Filter display results to only show specific Priority levels
+- Search for items created before/after a specific date 
+- Search for items completed before/after a specific date 
